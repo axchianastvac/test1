@@ -31,6 +31,37 @@
 			padding: 20px;
 			background-color: #bed9a7;
 		}
+		{
+  box-sizing: content-box;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+.heart {
+  width: 40px;
+  height: 40px;
+  background: red;
+  margin: 20px;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+}
+.heart::after,
+.heart::before {
+  content: '';
+  height: 40px;
+  width: 40px;
+  background: red;
+  position: absolute;
+  border-radius: 50%;
+}
+.heart::after {
+  left: -20px;
+}
+.heart::before {
+  top: -20px
+}
 	</style>
 </head>
 <body>
@@ -40,6 +71,10 @@
 	</header>
 	<!--main element-->
 	<main>
+		<div class="container">
+			<div class="heart"></div>
+		</div>
+
 		<div class="box text">
 		<h2>PRAY
 		</h2>
